@@ -113,7 +113,7 @@ def main():
 
     search(s, g)
 
-    # Following is to test the working of individual functions
+    # Following is to test the working of individual functions:
     # check = compare(s, g)
     # print(s)
     # new_state = right(s)
