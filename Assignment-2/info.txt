@@ -1,0 +1,3 @@
+Informaiton about Assignment 2.
+
+In this assignment we tackel the 8 box puzzle problem using brute force technique. 
