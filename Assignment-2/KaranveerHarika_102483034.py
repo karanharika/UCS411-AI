@@ -1,7 +1,6 @@
 """ Written by: Karanveer Singh Harika
     Roll No: 102483034
-    This code deals with 8 Box Puzzle problem and solves from the Initial state to Goal state.
-"""
+    This code deals with 8 Box Puzzle problem and solves from the Initial state to Goal state."""
 import copy
 
 
