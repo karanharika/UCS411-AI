@@ -218,7 +218,7 @@ def main():
     g_water = [2, 0]  # Goal State
 
     print(f"Initial state: \n"
-          f"\t{s}\n"
+          f"\t{s_water}\n"
           f"\t^   ^\n"
           f"\t|   |\n"
           f"\t{jugA}L, {jugB}L")
