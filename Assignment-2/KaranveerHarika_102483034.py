@@ -1,7 +1,10 @@
 """ Written by: Karanveer Singh Harika
     Roll No: 102483034
     1. This code deals with 8 Box Puzzle problem and solves from the Initial state to Goal state.
-    2. This code also simulates procedure for 2 jug water problem."""
+    2. This code also simulates procedure for 2 jug water problem.
+    If there is some error in viewing code, this file is also available at following link:
+    https://github.com/karanharika/UCS411-AI/blob/main/Assignment-2/KaranveerHarika_102483034.py
+    (GitHub Link)"""
 import copy
 
 jugA = 0
