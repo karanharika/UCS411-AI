@@ -1,6 +1,6 @@
 """ Written by: Karanveer Singh Harika
     Roll No: 102483034
-    This code solves the blocks world problem using DFS (Depth First Search)."""
+    This code solves the blocks world problem using Iterative deepening BFS."""
 import copy
 
 q = []
@@ -24,38 +24,47 @@ def movegen(s):
     return children
 
 
-def search(g):
+def search(g, depth):
     """This function searches for the goal state and prints the result."""
-    print(f"Initial state: {q[0]}")
+    # print(f"Initial state: {q[0]}")
     while len(q) > 0:
-        curr_state = q[-1]              # for DFS
-        del q[-1]                       # for DFS
+        curr_state = q[0]              # for BFS
+        del q[0]                       # for BFS
 
-        if curr_state == g:
-            print("Found goal state!")
+        if curr_state[0] == g:
+            print(f"Found goal state! At depth: {curr_state[1]}")
             print(f"Goal state: {curr_state}")
-            return
+            return True
 
-        visited.append(curr_state)
-        children_list = movegen(curr_state)
+        visited.append(curr_state[0])
+        children_list = movegen(curr_state[0])
 
         for child in children_list:
             if child not in visited and child not in q:
-                q.append(child)
-                # print(q)
+                if curr_state[1]+1 <= depth:
+                    q.append([child, curr_state[1]+1])
+                    # print(q)
 
-    print("Goal state not found!")
+    print(f"Goal state not found! @ Depth: {depth}")
+    return False
 
 
 def main():
     """Main function."""
-    s = [['A'], ['B', 'C'], []]
-    s.sort()
+    global q
+    global visited
+    s = [[['A'], ['B', 'C'], []], 0]
+    s[0].sort()
     g = [['A', 'B', 'C'], [], []]
     g.sort()
 
-    q.append(s)
-    search(g)
+    check = False
+    depth = 0
+    while depth <10 and not check:
+        visited = []
+        q.append(s)
+        check = search(g,depth)
+        depth +=1
 
 
 if __name__ == "__main__":
