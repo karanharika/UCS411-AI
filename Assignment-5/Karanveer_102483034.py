@@ -1,3 +1,6 @@
+"""Written by: Karanveer Singh Harika
+    Roll No: 102483034
+   Assignment 5 - Simulated Annealing"""
 import copy
 import math
 import random
